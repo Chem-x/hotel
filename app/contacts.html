@@ -1,0 +1,78 @@
+
+<!-- Шаблон для наслідування-->
+<!-- створюється блок, щоб потім можна було в нього всписати змінні-->
+<!--при include не можна редагувати блок--><!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Контакти     // поле для var pageTitle</title>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="libs/jquery-ui-1.12.1.custom/jquery-ui.min.css"/>
+    <link rel="stylesheet" href="libs/jquery-ui-1.12.1.custom/jquery-ui.structure.css"/>
+    <link rel="stylesheet" href="libs/jquery-ui-1.12.1.custom/jquery-ui.theme.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,700,700i&amp;amp;subset=cyrillic-ext"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/><!--[if lt IE 9]>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="section-header">
+        <div class="logo"><a href="#"><img src="img/logo/logo.png"/></a></div>
+        <div class="navigation">
+          <!--mixin navLink(link,name)
+          li
+          	a(href=link class={ active : name === current }) 				
+          -->
+          <ul>
+                      <li><a href="index.html">Головна<br/><span>Ласкаво просимо</span></a></li>
+                      <li><a href="appartment-page.html">Апартаменти<br/><span>Вибір номера</span></a></li>
+                      <li><a href="contacts.html">Контакти<br/><span>Напишіть нам</span></a></li>
+                      <li class="reservation-btn custom-color-btn-back"><a href="#">Бронювання<br/><span>Забронювати номер</span></a></li>
+            <!--li.reservation-btn.custom-color-btn-back
+            a(href='#')
+            	| Бронювання
+            	br 
+            	span
+            		| Забронювати номер
+            -->
+          </ul>
+        </div>
+      </div>
+      <div class="section-content">
+        <h1>Зворотний зв'язок</h1>
+        <form class="contact-form" id="contact-form">
+          <div class="row" id="form-notify"></div>
+          <div class="contact-form__row">
+            <input class="input input--half" type="text" id="input-name" name="contact-font-name" placeholder="Введіть ім'я"/>
+            <input class="input input--half" type="text" id="input-email" name="contact-font-email" placeholder="Введіть email"/>
+          </div>
+          <div class="contact-form__row">
+            <textarea class="textarea" id="input-message" name="contact-font-message" placeholder="Ваше повідомлення"></textarea>
+          </div>
+          <div class="contact-form__row">
+            <input class="button" type="submit" id="input-sumbit" name="contact-font-sumbit" value="Відправити"/>
+          </div>
+        </form>
+      </div>
+      <!-- блок для контенту
+      h1 Main template pug
+      
+      -->
+      <div class="section-footer">
+        <div class="map">
+          <!-- img(src="http://via.placeholder.com/250x150", alt="")--><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3698.2025663313593!2d30.525012600552753!3d50.448933231429166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce53dbbdc391%3A0x71aa7c1dce2058dc!2z0JPQvtGC0LXQu9GMINCj0LrRgNCw0ZfQvdCw!5e0!3m2!1suk!2ses!4v1518527150560" width="300" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+        <div class="address">
+          <p><strong>4 Instytutska Str. <br></strong>01001, Kiev<br>
+            Ukraine <br>
+            + 380 44 279 03 47
+          </p>
+        </div>
+        <div class="footer__social"><a href="#" target="_blank"><i class="fa fa-vk"></i></a><a href="#" target="_blank"><i class="fa fa-telegram"></i></a><a href="#" target="_blank"><i class="fa fa-twitter"></i></a><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></div>
+      </div>
+    </div>
+  </body>
+  <script src="libs/jquery.js"></script>
+  <script src="libs/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+  <script src="js/main.js"></script>
+</html>

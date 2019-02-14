@@ -1,0 +1,18 @@
+.section-header
+	.logo
+		a(href='#')
+			img(src='img/logo/logo.png', alt= title width= width)
+	.navigation
+		include ../mixins/nav.pug
+		ul
+			+navLink('index.html','Головна','Ласкаво просимо')
+			+navLink('appartment-page.html','Апартаменти','Вибір номера')
+			+navLink('contacts.html','Контакти','Напишіть нам')
+			+navLink('#','Бронювання','Забронювати номер')(class='reservation-btn custom-color-btn-back')
+			//li.reservation-btn.custom-color-btn-back
+				a(href='#')
+					| Бронювання
+					br 
+					span
+						| Забронювати номер
+
